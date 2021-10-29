@@ -1,0 +1,139 @@
+/*____________COLOR_______________*/
+$hovcol:#F37800;
+$navcol: #216079;
+/*
+FONTS
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+/*______________________*/
+/*_____________Mixins ____________*/
+@mixin btsit {
+    text-align: center;
+    padding: 0.8rem;
+   
+
+    .df {
+        visibility: hidden;
+    }
+
+    &:hover {
+        background-color:$hovcol;
+
+        .df {
+            visibility: visible;
+
+        }
+    }
+}
+@mixin sdmn {
+    text-align: left;
+    padding: 0.7rem;
+    color: $navcol;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    .dft {
+        visibility: hidden;
+    }
+    &:hover {
+     
+
+        .dft {
+            visibility: visible;
+
+        }
+    }
+}
+
+/*________________________________*/
+/* HEADER */
+.topheader {
+    background-color: #f0f1f3;
+    color: #888a89;
+}
+
+.topheader>ul {
+    list-style: none;
+
+}
+
+.topheader li {
+    display: inline;
+    padding: 0.25rem 1.75rem;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.topsr {
+    padding: 2rem;
+}
+
+.csrt {
+    font-family: 'Montserrat', sans-serif;
+    color: #888a89;
+    font-size: 0.9rem;
+    margin-left: 5%;
+}
+
+.phonec {
+    color: #575757;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+
+}
+
+.phonec1 {
+    color: #575757;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+
+}
+
+.kk {
+    font-family: 'Varela Round', sans-serif;
+    text-transform: uppercase;
+}
+
+/*___________________________________________*/
+/* MENU*/
+nav {
+    background-color:$navcol;
+    height: 50px;
+
+}
+
+#menu {
+
+    list-style: none;
+
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu>li {
+    flex: 1;
+    @include btsit;
+}
+#menu>li>a{
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bolder;
+}
+
+.sdmenu>li{
+    list-style: none;
+    @include sdmn;
+}
+/*____________________________________________*/
